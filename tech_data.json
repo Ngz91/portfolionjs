@@ -1,0 +1,137 @@
+{
+  "python": {
+    "id": 1,
+    "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation...",
+    "wikipage": "https://www.python.org/"
+  },
+  "javascript": {
+    "id": 2,
+    "description": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web...",
+    "wikipage": "https://www.javascript.com/"
+  },
+  "typescript": {
+    "id": 3,
+    "description": "TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language...",
+    "wikipage": "https://www.typescriptlang.org/"
+  },
+  "html5": {
+    "id": 4,
+    "description": "HTML5 is a markup language used for structuring and presenting content on the World Wide Web...",
+    "wikipage": "https://en.wikipedia.org/wiki/HTML5"
+  },
+  "css3": {
+    "id": 5,
+    "description": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML...",
+    "wikipage": "https://en.wikipedia.org/wiki/CSS"
+  },
+  "react": {
+    "id": 6,
+    "description": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces based on UI components...",
+    "wikipage": "https://reactjs.org/"
+  },
+  "nextjs": {
+    "id": 7,
+    "description": "Next.js is an open-source web development framework built on top of Node.js enabling React-based web applications functionalities such as server-side rendering and generating static websites...",
+    "wikipage": "https://nextjs.org/"
+  },
+  "tailwindcss": {
+    "id": 8,
+    "description": "A utility-first CSS framework...",
+    "wikipage": "https://tailwindcss.com/"
+  },
+  "materialui": {
+    "id": 9,
+    "description": "Component library for React...",
+    "wikipage": "https://mui.com/"
+  },
+  "bootstrap": {
+    "id": 10,
+    "description": "Powerful, extensible, and feature-packed frontend toolkit.",
+    "wikipage": "https://getbootstrap.com/"
+  },
+  "django/drf": {
+    "id": 11,
+    "description": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design...",
+    "wikipage": "https://www.djangoproject.com/"
+  },
+  "sqlite": {
+    "id": 12,
+    "description": "SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine...",
+    "wikipage": "https://www.sqlite.org/index.html"
+  },
+  "postgresql": {
+    "id": 13,
+    "description": "PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development...",
+    "wikipage": "https://www.postgresql.org/"
+  },
+  "mysql": {
+    "id": 14,
+    "description": "MySql is an open-source relational database management system...",
+    "wikipage": "https://www.mysql.com/"
+  },
+  "graphql": {
+    "id": 15,
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data...",
+    "wikipage": "https://graphql.org/"
+  },
+  "anaconda": {
+    "id": 16,
+    "description": "Anaconda is a distribution of the Python and R programming languages for scientific computing...",
+    "wikipage": "https://www.anaconda.com/"
+  },
+  "tensorflow": {
+    "id": 17,
+    "description": "TensorFlow is an end-to-end open source platform for machine learning...",
+    "wikipage": "https://www.tensorflow.org/"
+  },
+  "numpy": {
+    "id": 18,
+    "description": "Numpy is a library for numerical computing with Python...",
+    "wikipage": "https://numpy.org/"
+  },
+  "pandas": {
+    "id": 19,
+    "description": "Pandas is a software library written for the Python programming language for data manipulation and analysis...",
+    "wikipage": "https://pandas.pydata.org/"
+  },
+  "jupyter": {
+    "id": 20,
+    "description": "Free software, open standards, and web services for interactive computing across all programming languages...",
+    "wikipage": "https://jupyter.org/"
+  },
+  "pytest": {
+    "id": 21,
+    "description": "Pytest framework makes it easy to write small, readable tests...",
+    "wikipage": "https://docs.pytest.org/en/7.1.x/"
+  },
+  "selenium": {
+    "id": 22,
+    "description": "Selenium is a software library for automating web applications for testing purposes...",
+    "wikipage": ""
+  },
+  "heroku": {
+    "id": 23,
+    "description": "Heroku is a cloud platform as a service (PaaS) supporting several programming languages...",
+    "wikipage": "https://www.heroku.com/"
+  },
+  "ubuntu": {
+    "id": 24,
+    "description": "Ubuntu is a Linux distribution based on Debian...",
+    "wikipage": "https://ubuntu.com/"
+  },
+  "linux": {
+    "id": 25,
+    "description": "Linux is a family of open-source Unix-like operating systems based on the Linux kernel...",
+    "wikipage": "https://www.linux.org/"
+  },
+  "vim": {
+    "id": 26,
+    "description": "hyperextensible Vim-based text editor...",
+    "wikipage": "https://neovim.io/"
+  },
+  "vscode": {
+    "id": 27,
+    "description": "VsCode is a source-code editor made by Microsoft",
+    "wikipage": "https://code.visualstudio.com/"
+  }
+}

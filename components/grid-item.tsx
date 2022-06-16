@@ -49,7 +49,7 @@ export const ProjectsGridItem = ({
   title,
   thumbnail,
 }: gridProps) => (
-  <Box w='100%' textAlign='center' boxShadow='2xl' paddingY={6} rounded='lg'>
+  <Box w='100%' textAlign='center' boxShadow='2xl' paddingBottom={6} mt={6} rounded='lg' transition='all 500ms ease-in-out' _hover={{bgColor:'teal.800'}}>
     <NextLink href={`/projects/${id}/${slug}`}>
       <LinkBox cursor='pointer'>
         <Image
@@ -58,9 +58,9 @@ export const ProjectsGridItem = ({
           className='grid-item-thumbnail'
           blurDataURL='data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
           placeholder='blur'
-          width={350}
+          width={425}
           height={250}
-          style={{ borderRadius: '10px' }}
+          style={{ borderRadius: '10px 10px 0px 0px' }}
         />
         <LinkOverlay href={`projects/${id}/${slug}`} target='_blank'>
           <Text

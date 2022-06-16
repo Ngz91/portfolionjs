@@ -4,9 +4,17 @@ import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { Box, Spinner, Tooltip, SimpleGrid, Button } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Heading,
+  Spinner,
+  Text,
+  Tooltip,
+  SimpleGrid,
+  Button,
+} from '@chakra-ui/react'
 import fsPromises from 'fs/promises'
-import Section from '../../../components/section'
 import Layout from '../../../components/layouts/article'
 import path from 'path'
 import { ChevronLeftIcon } from '@chakra-ui/icons'
@@ -49,20 +57,42 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
         </Box>
       ) : (
         <Layout>
-          <Section>
-            <h1>{project?.name}</h1>
-            <Image
-              src={
-                `http://localhost:8000/${project?.image?.replace('/', '')}` ||
-                '/vercel.svg'
-              }
-              width={200}
-              height={200}
-              alt={project?.name}
-            />
-            <p>{project?.description}</p>
+          <Container>
+            <Heading
+              as='h3'
+              fontSize={20}
+              mt={6}
+              mb={4}
+              borderBottom='lg'
+              textDecoration='underline'
+              textUnderlineOffset={6}
+              textDecorationColor='#525252'
+            >
+              {project?.name}
+            </Heading>
+            <Box textAlign='center'>
+              <Image
+                src={
+                  `http://localhost:8000/${project?.image?.replace('/', '')}` ||
+                  '/vercel.svg'
+                }
+                width={500}
+                height={350}
+                alt={project?.name}
+              />
+            </Box>
+            <Text align='justify'>{project?.description}</Text>
             <br />
-            <p>Stack:</p>
+            <Text
+              mb={6}
+              fontWeight='bold'
+              textDecoration='underline'
+              borderBottom='lg'
+              textUnderlineOffset={6}
+              textDecorationColor='#525252'
+            >
+              Stack:
+            </Text>
             <Box textAlign='center' alignContent='center'>
               <SimpleGrid columns={[2, 3, 3]} gap={4}>
                 {Array.isArray(project?.technologies) ? (
@@ -143,9 +173,7 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
                 )}
               </SimpleGrid>
             </Box>
-            <br />
-            <p>{project?.project_date?.replaceAll('-', '/')}</p>
-            <br />
+            <Text my={6}><b>Project start date:</b> {project?.project_date?.replaceAll('-', '/')}</Text>
             <NextLink href='/projects'>
               <Button
                 leftIcon={<ChevronLeftIcon />}
@@ -155,7 +183,7 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
                 Projects
               </Button>
             </NextLink>
-          </Section>
+          </Container>
         </Layout>
       )}
     </>

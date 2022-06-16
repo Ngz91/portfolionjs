@@ -26,6 +26,7 @@ const Projects: NextPage<projectProps> = ({ projects }) => {
         <Heading
           as='h3'
           fontSize={20}
+          mt={6}
           mb={4}
           borderBottom='lg'
           textDecoration='underline'

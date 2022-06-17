@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 
 const Paragraph = styled.p`
   text-align: 'justify';
+  color: 'red';
   text-indent: 1em;
 `
 

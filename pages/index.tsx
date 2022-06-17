@@ -6,14 +6,25 @@ import {
   Box,
   Container,
   Heading,
+  Text,
   Button,
   Image,
+  SimpleGrid,
+  Icon,
   useColorModeValue,
 } from '@chakra-ui/react'
 import Section from '../components/section'
-import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
+import { GridItem } from '../components/grid-item'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+
+import {
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoDiscord,
+  IoLogoGoogle,
+} from 'react-icons/io5'
+import Link from 'next/link'
 
 type ProjectListProps = {
   projects: {
@@ -82,19 +93,16 @@ const Home: NextPage<ProjectListProps> = () => {
           >
             Work
           </Heading>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-            reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
-            ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-            Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-            voluptate dolor minim nulla est proident. Nostrud officia pariatur
-            ut officia. Sit irure elit esse ea nulla sunt ex occaecat
-            reprehenderit commodo officia dolor Lorem duis laboris cupidatat
-            officia voluptate. Culpa proident adipisicing id nulla nisi laboris
-            ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo
-            ex non excepteur duis sunt velit enim. Voluptate laboris sint
-            cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
-          </Paragraph>
+          <Text textAlign='justify' style={{ textIndent: '1rem' }}>
+            Industrial Engineer who discovered a passion for coding and building
+            Machine Learning models. I have experience working in projects where
+            code must be changed and updated constantly to achieve a better
+            result. The majority of my projects have been directed to the
+            automation of various tasks, but aside from my job I have continued
+            to develop my skills and have had the opportunity to work on
+            different projects including creating a program which works by
+            applying statistics to the field of horse betting.
+          </Text>
           <Box textAlign='center' my={4}>
             <NextLink href='/projects'>
               <Button
@@ -106,6 +114,99 @@ const Home: NextPage<ProjectListProps> = () => {
               </Button>
             </NextLink>
           </Box>
+        </Section>
+        <Section delay={0.1} duration={0.8}>
+          <Heading
+            as='h3'
+            borderBottom='lg'
+            fontSize={24}
+            textDecoration='underline'
+            textUnderlineOffset={6}
+            textDecorationColor='#525252'
+            mb={3}
+            mt={4}
+          >
+            My skills
+          </Heading>
+          <Text textAlign='justify' style={{ textIndent: '1rem' }}>
+            Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+            reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
+            ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
+            Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
+            voluptate dolor minim nulla est proident. Nostrud officia pariatur
+            ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+            reprehenderit commodo officia dolor Lorem duis laboris cupidatat
+            officia voluptate. Culpa proident adipisicing id nulla nisi laboris
+            ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo
+            ex non excepteur duis sunt velit enim. Voluptate laboris sint
+            cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+          </Text>
+        </Section>
+        <Section>
+          <Heading
+            as='h3'
+            borderBottom='lg'
+            fontSize={24}
+            textDecoration='underline'
+            textUnderlineOffset={6}
+            textDecorationColor='#525252'
+            mb={3}
+            mt={4}
+          >
+            On the Web
+          </Heading>
+          <SimpleGrid
+            columns={[1, 2, 2]}
+            gap={4}
+            textAlign='center'
+            alignContent='center'
+          >
+            <Link href='https://github.com/ngz91' target='_blank'>
+              <Button
+                colorScheme='teal'
+                variant='ghost'
+                leftIcon={<Icon as={IoLogoGithub} />}
+                width={150}
+                justifyContent='left'
+              >
+                @Ngz91
+              </Button>
+            </Link>
+            <Link href='https://linkedin.com/in/neviogomez' target='_blank'>
+              <Button
+                colorScheme='teal'
+                variant='ghost'
+                leftIcon={<Icon as={IoLogoLinkedin} />}
+                width={150}
+                justifyContent='left'
+              >
+                Nevio Gomez
+              </Button>
+            </Link>
+            <Link
+              href='https://discordapp.com/users/366047479399186432'
+              target='_blank'
+            >
+              <Button
+                colorScheme='teal'
+                variant='ghost'
+                leftIcon={<Icon as={IoLogoDiscord} />}
+                width={150}
+                justifyContent='left'
+              >
+                @Ari777
+              </Button>
+            </Link>
+            <Button
+              colorScheme='teal'
+              variant='ghost'
+              leftIcon={<Icon as={IoLogoGoogle} />}
+              width={210}
+              justifyContent='left'
+            >
+              neviogomez91@gmail
+            </Button>
+          </SimpleGrid>
         </Section>
       </Container>
     </Layout>

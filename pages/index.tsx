@@ -161,50 +161,59 @@ const Home: NextPage<ProjectListProps> = () => {
             textAlign='center'
             alignContent='center'
           >
-            <Link href='https://github.com/ngz91' target='_blank'>
+            <a
+              href='https://github.com/ngz91'
+              target='_blank'
+              style={{ textAlign: 'left', width: '170px' }}
+            >
               <Button
                 colorScheme='teal'
                 variant='ghost'
                 leftIcon={<Icon as={IoLogoGithub} />}
-                width={150}
+                width={170}
                 justifyContent='left'
               >
                 @Ngz91
               </Button>
-            </Link>
-            <Link href='https://linkedin.com/in/neviogomez' target='_blank'>
+            </a>
+            <a
+              href='https://linkedin.com/in/neviogomez'
+              target='_blank'
+              style={{ textAlign: 'left', width: '170px' }}
+            >
               <Button
                 colorScheme='teal'
                 variant='ghost'
                 leftIcon={<Icon as={IoLogoLinkedin} />}
-                width={150}
+                width={170}
                 justifyContent='left'
               >
                 Nevio Gomez
               </Button>
-            </Link>
-            <Link
+            </a>
+            <a
               href='https://discordapp.com/users/366047479399186432'
               target='_blank'
+              style={{ textAlign: 'left', width: '170px' }}
             >
               <Button
                 colorScheme='teal'
                 variant='ghost'
                 leftIcon={<Icon as={IoLogoDiscord} />}
-                width={150}
+                width={170}
                 justifyContent='left'
               >
                 @Ari777
               </Button>
-            </Link>
+            </a>
             <Button
               colorScheme='teal'
               variant='ghost'
               leftIcon={<Icon as={IoLogoGoogle} />}
-              width={210}
+              width={170}
               justifyContent='left'
             >
-              neviogomez91@gmail
+              Neviogomez91
             </Button>
           </SimpleGrid>
         </Section>

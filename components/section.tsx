@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
-import Image from 'next/image'
-import { motion, MotionProps } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { chakra, shouldForwardProp } from '@chakra-ui/react'
 
 type sectionProps = {
@@ -15,7 +14,7 @@ const StyledDiv = chakra(motion.div, {
   },
 })
 
-const Section = ({ children, delay, duration }: sectionProps) => {
+const Section: React.FC<sectionProps> = ({ children, delay, duration }) => {
   return (
     <StyledDiv
       initial={{ y: 10, opacity: 0 }}

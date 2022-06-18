@@ -2,8 +2,9 @@ import { IconButton, useColorModeValue, useColorMode } from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 import { Tooltip } from '@chakra-ui/react'
 import { AnimatePresence, motion } from 'framer-motion'
+import React from 'react'
 
-const ThemeToggleButton = () => {
+const ThemeToggleButton: React.FC = () => {
   const { toggleColorMode } = useColorMode()
 
   return (

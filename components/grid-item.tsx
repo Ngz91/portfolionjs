@@ -3,6 +3,7 @@ import Image from 'next/image'
 import NextLink from 'next/link'
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
+import React from 'react'
 
 type gridProps = {
   children?: ReactNode
@@ -13,13 +14,13 @@ type gridProps = {
   thumbnail: string
 }
 
-export const GridItem = ({
+export const GridItem: React.FC<gridProps> = ({
   children,
   id,
   slug,
   title,
   thumbnail,
-}: gridProps) => (
+}) => (
   <Box w='100%' textAlign='center'>
     <LinkBox cursor='pointer'>
       <Image
@@ -42,14 +43,23 @@ export const GridItem = ({
   </Box>
 )
 
-export const ProjectsGridItem = ({
+export const ProjectsGridItem: React.FC<gridProps> = ({
   id,
   slug,
   brief_desc,
   title,
   thumbnail,
-}: gridProps) => (
-  <Box w='100%' textAlign='center' boxShadow='2xl' paddingBottom={6} mt={6} rounded='lg' transition='all 500ms ease-in-out' _hover={{bgColor:'teal.800'}}>
+}) => (
+  <Box
+    w='100%'
+    textAlign='center'
+    boxShadow='2xl'
+    paddingBottom={6}
+    mt={6}
+    rounded='lg'
+    transition='all 500ms ease-in-out'
+    _hover={{ bgColor: 'teal.800' }}
+  >
     <NextLink href={`/projects/${id}/${slug}`}>
       <LinkBox cursor='pointer'>
         <Image

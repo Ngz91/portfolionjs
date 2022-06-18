@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
-import useRouter from 'next/router'
 import ThemeToggleButton from './theme-toggle-button'
 
 import {
@@ -22,7 +21,6 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io5'
 import { SiHeroku } from 'react-icons/si'
-import { AppProps } from 'next/app'
 
 type linkProps = {
   href?: string | any
@@ -30,7 +28,7 @@ type linkProps = {
   children?: ReactNode
 }
 
-const LinkItem = ({ href, path, children, ...props }: linkProps) => {
+const LinkItem: React.FC<linkProps> = ({ href, path, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('black', 'whiteAlpha.900')
 
@@ -53,7 +51,7 @@ const LinkItem = ({ href, path, children, ...props }: linkProps) => {
   )
 }
 
-const NavBar: React.FC<linkProps> = (props: linkProps) => {
+const NavBar: React.FC<linkProps> = (props) => {
   const { path } = props
 
   return (

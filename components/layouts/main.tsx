@@ -9,7 +9,7 @@ type mainProps = {
   router: typeof useRouter
 }
 
-const Main: React.FC<mainProps> = ({ children, router }: mainProps) => {
+const Main: React.FC<mainProps> = ({ children, router }) => {
   return (
     <Box as='main' pb={8}>
       <Head>

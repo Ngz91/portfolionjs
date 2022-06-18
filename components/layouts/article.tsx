@@ -14,7 +14,7 @@ type layoutProps = {
   title?: string
 }
 
-const Layout: React.FC<layoutProps> = ({ children, title }: layoutProps) => (
+const Layout: React.FC<layoutProps> = ({ children, title }) => (
   <motion.article
     initial='hidden'
     animate='enter'

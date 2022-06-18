@@ -15,7 +15,6 @@ import {
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
-import { GridItem } from '../components/grid-item'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import {
@@ -24,19 +23,8 @@ import {
   IoLogoDiscord,
   IoLogoGoogle,
 } from 'react-icons/io5'
-import Link from 'next/link'
 
-type ProjectListProps = {
-  projects: {
-    id?: number
-    name?: string
-    description?: string
-    technologies?: any
-    project_date?: string
-  }
-}
-
-const Home: NextPage<ProjectListProps> = () => {
+const Home: NextPage = () => {
   return (
     <Layout>
       <Container>

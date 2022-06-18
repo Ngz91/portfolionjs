@@ -18,6 +18,7 @@ import fsPromises from 'fs/promises'
 import Layout from '../../../components/layouts/article'
 import path from 'path'
 import { ChevronLeftIcon } from '@chakra-ui/icons'
+import { IoLogoGithub } from 'react-icons/io5'
 
 type ProjectProps = {
   project?: {
@@ -25,6 +26,7 @@ type ProjectProps = {
     name?: string
     image?: string
     description?: string
+    github_repo?: string
     technologies?: any
     project_date?: string
   }
@@ -82,6 +84,17 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
               />
             </Box>
             <Text align='justify'>{project?.description}</Text>
+            <Box textAlign='center' mt={6}>
+              <a href={project?.github_repo} target='_blank'>
+                <Button
+                  leftIcon={<IoLogoGithub />}
+                  bgGradient='linear(to-r, teal.500, green.500)'
+                  _hover={{ bgGradient: 'linear(to-r, teal.600, green.600)' }}
+                >
+                  Github Repo
+                </Button>
+              </a>
+            </Box>
             <br />
             <Text
               mb={6}
@@ -173,7 +186,10 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
                 )}
               </SimpleGrid>
             </Box>
-            <Text my={6}><b>Project start date:</b> {project?.project_date?.replaceAll('-', '/')}</Text>
+            <Text my={6}>
+              <b>Project start date:</b>{' '}
+              {project?.project_date?.replaceAll('-', '/')}
+            </Text>
             <NextLink href='/projects'>
               <Button
                 leftIcon={<ChevronLeftIcon />}

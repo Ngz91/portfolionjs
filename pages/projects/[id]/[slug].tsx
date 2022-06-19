@@ -15,6 +15,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import fsPromises from 'fs/promises'
+import Stack from '../../../components/Stack'
 import Layout from '../../../components/layouts/article'
 import path from 'path'
 import { ChevronLeftIcon } from '@chakra-ui/icons'
@@ -106,86 +107,7 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
             >
               Stack:
             </Text>
-            <Box textAlign='center' alignContent='center'>
-              <SimpleGrid columns={[2, 3, 3]} gap={4}>
-                {Array.isArray(project?.technologies) ? (
-                  project?.technologies.map((item: string, index: number) =>
-                    item.toLowerCase() !== 'tensorflow' ? (
-                      <Tooltip
-                        label={stack?.[item.toLowerCase()]?.description}
-                        key={index}
-                        fontSize='12px'
-                        width='80%'
-                      >
-                        <Box width={150}>
-                          <a
-                            href={stack?.[item.toLowerCase()]?.wikipage}
-                            target='_blank'
-                          >
-                            <i
-                              key={index}
-                              className={`devicon-${
-                                item.toLowerCase().split('/')[0]
-                              }-plain colored`}
-                              style={{
-                                fontSize: '20px',
-                                textShadow: '1px 1px black',
-                              }}
-                            >
-                              {' '}
-                              {item}{' '}
-                            </i>
-                          </a>
-                        </Box>
-                      </Tooltip>
-                    ) : (
-                      <Tooltip
-                        label={stack?.[item.toLowerCase()]?.description}
-                        key={index}
-                      >
-                        <Box width={150}>
-                          <a
-                            href={stack?.[item.toLowerCase()]?.wikipage}
-                            target='_blank'
-                          >
-                            <i
-                              key={index}
-                              className={`devicon-${item.toLowerCase()}-original colored`}
-                              style={{ fontSize: '20px' }}
-                            >
-                              {' '}
-                              {item}{' '}
-                            </i>
-                          </a>
-                        </Box>
-                      </Tooltip>
-                    )
-                  )
-                ) : (
-                  <Tooltip
-                    label={
-                      stack?.[project?.technologies.toLowerCase()]?.description
-                    }
-                  >
-                    <Box width={150}>
-                      <a
-                        href={
-                          stack?.[project?.technologies.toLowerCase()]?.wikipage
-                        }
-                      >
-                        <i
-                          className={`devicon-${project?.technologies.toLowerCase()}-plain colored`}
-                          style={{ fontSize: '22px' }}
-                        >
-                          {' '}
-                          {project?.technologies}{' '}
-                        </i>
-                      </a>
-                    </Box>
-                  </Tooltip>
-                )}
-              </SimpleGrid>
-            </Box>
+            <Stack project={project} stack={stack} />
             <Text my={6}>
               <b>Project start date:</b>{' '}
               {project?.project_date?.replaceAll('-', '/')}

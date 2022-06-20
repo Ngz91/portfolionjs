@@ -10,8 +10,6 @@ import {
   Heading,
   Spinner,
   Text,
-  Tooltip,
-  SimpleGrid,
   Button,
 } from '@chakra-ui/react'
 import fsPromises from 'fs/promises'
@@ -21,7 +19,7 @@ import path from 'path'
 import { ChevronLeftIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io5'
 
-type ProjectProps = {
+export type ProjectProps = {
   project?: {
     id?: number
     name?: string

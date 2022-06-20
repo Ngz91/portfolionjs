@@ -1,24 +1,6 @@
 import React from 'react'
 import { Box, SimpleGrid, Tooltip, Text } from '@chakra-ui/react'
-
-type ProjectProps = {
-  project?: {
-    id?: number
-    name?: string
-    image?: string
-    description?: string
-    github_repo?: string
-    technologies?: any
-    project_date?: string
-  }
-
-  stack: {
-    [index: string]: string | any
-    id?: number
-    description?: string
-    wikipage?: string
-  }
-}
+import type { ProjectProps } from '../pages/projects/[id]/[slug]'
 
 const Stack: React.FC<ProjectProps> = ({ project, stack }) => (
   <Box textAlign='center' alignContent='center'>

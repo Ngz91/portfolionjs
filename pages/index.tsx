@@ -1,6 +1,7 @@
 import type { NextPage, GetStaticProps } from 'next'
 import NextLink from 'next/link'
 import axios from 'axios'
+import fsPromises from 'fs/promises'
 
 import {
   Box,
@@ -23,6 +24,7 @@ import {
   IoLogoDiscord,
   IoLogoGoogle,
 } from 'react-icons/io5'
+import Skills from '../components/skills'
 
 const Home: NextPage = () => {
   return (
@@ -39,17 +41,10 @@ const Home: NextPage = () => {
         </Box>
 
         <Box display={{ md: 'flex' }}>
-          <Box flexGrow={1}>
-            <Heading as='h2' variant='page-title'>
-              Nevio Gomez
-            </Heading>
-            <p>Industrial Engineer / Developer / Data Science Enthusiast</p>
-          </Box>
-
           <Box
             flexShrink={0}
             mt={{ base: 6, md: 0 }}
-            ml={{ md: 6 }}
+            mr={{ md: 6 }}
             textAlign='center'
             mb={0}
           >
@@ -65,6 +60,12 @@ const Home: NextPage = () => {
               transition='1s ease-out'
               _hover={{ filter: 'brightness(120%)' }}
             />
+          </Box>
+          <Box flexGrow={1} ml={3}>
+            <Heading as='h2' variant='page-title'>
+              Nevio Gomez
+            </Heading>
+            <p>Industrial Engineer / Developer / Data Science Enthusiast</p>
           </Box>
         </Box>
 
@@ -114,7 +115,7 @@ const Home: NextPage = () => {
             mb={3}
             mt={4}
           >
-            My skills
+            My Top Skills
           </Heading>
           <Text textAlign='justify' style={{ textIndent: '1rem' }}>
             Lorem ipsum dolor sit amet, officia excepteur ex fugiat

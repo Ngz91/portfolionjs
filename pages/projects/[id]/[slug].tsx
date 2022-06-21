@@ -13,7 +13,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import fsPromises from 'fs/promises'
-import Stack from '../../../components/Stack'
+import Stack from '../../../components/stack'
 import Layout from '../../../components/layouts/article'
 import path from 'path'
 import { ChevronLeftIcon } from '@chakra-ui/icons'

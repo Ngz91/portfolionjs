@@ -8,15 +8,15 @@ const ThemeToggleButton: React.FC = () => {
   const { toggleColorMode } = useColorMode()
 
   return (
-    <Tooltip label='Toggle Theme'>
-      <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence exitBeforeEnter initial={false}>
+      <Tooltip label='Toggle Theme'>
         <motion.div
           style={{ display: 'inline-block' }}
           key={useColorModeValue('light', 'dark')}
           initial={{ rotate: -180, opacity: 0 }}
           animate={{ rotate: 0, opacity: 1 }}
           exit={{ rotate: 180, opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <IconButton
             aria-label='Toggle Theme'
@@ -26,8 +26,8 @@ const ThemeToggleButton: React.FC = () => {
             transitionDuration='200ms'
           />
         </motion.div>
-      </AnimatePresence>
-    </Tooltip>
+      </Tooltip>
+    </AnimatePresence>
   )
 }
 

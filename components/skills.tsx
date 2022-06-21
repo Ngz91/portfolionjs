@@ -1,48 +1,41 @@
-import React from 'react';
-import { GetStaticProps } from 'next'
+import React from 'react'
+import { Box, SimpleGrid, Text, Tooltip } from '@chakra-ui/react'
 
-import path from 'path'
-import fs from 'fs'
-
-import { Box, SimpleGrid, Text } from "@chakra-ui/react"
-
-type skillsProps = {
-    stack: {
-    [index: string]: string | any
-    id?: number
-    description?: string
-    wikipage?: string
-  }
+type techProps = {
+  tech?: string
+  desc?: string
 }
 
-const Skills: React.FC<skillsProps> = (props) => {
-  return (
-    <Box>
-      Something here
+const TechIcon: React.FC<techProps> = ({ tech, desc }) => (
+  <Tooltip label={desc} fontSize='12px' width='80%'>
+    <Box width={150} my={4}>
+      <a href='/' target='_blank'>
+        <i
+          className={`devicon-${tech}-plain colored`}
+          style={{
+            fontSize: '28px',
+            textShadow: '1px 1px black',
+          }}
+        ></i>
+        <Text textShadow='1px 1px black'>{tech}</Text>
+      </a>
     </Box>
-  )
-}
+  </Tooltip>
+)
 
-export const getStaticProps: GetStaticProps = async () => {
-  
-  const fs = require('fs/promises')
-
-  try {
-    const filePath = path.join(process.cwd(), 'tech_data.json')
-    const jsonData = await fs.readFile(filePath)
-    const objectData = JSON.parse(jsonData.toString())
-    return {
-      props: {
-        stack: objectData,
-      },
-    }
-  } catch (error) {
-    return {
-      props: {
-        stack: [],
-      },
-    }
-  }
-}
+const Skills: React.FC = () => (
+  <Box textAlign='center' alignContent='center'>
+    <SimpleGrid columns={[3, 4, 4]} gap={4}>
+      <TechIcon tech='python' desc='description about the technology here' />
+      <TechIcon tech='python' desc='description about the technology here' />
+      <TechIcon tech='python' desc='description about the technology here' />
+      <TechIcon tech='python' desc='description about the technology here' />
+      <TechIcon tech='python' desc='description about the technology here' />
+      <TechIcon tech='python' desc='description about the technology here' />
+      <TechIcon tech='python' desc='description about the technology here' />
+      <TechIcon tech='python' desc='description about the technology here' />
+    </SimpleGrid>
+  </Box>
+)
 
 export default Skills

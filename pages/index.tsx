@@ -117,7 +117,8 @@ const Home: NextPage = () => {
             My Top Skills
           </Heading>
           <Text textAlign='justify' style={{ textIndent: '1rem' }}>
-            Some technologies that I've worked in my years as a software developer
+            Some of the technologies that I've worked with in my years as a software
+            developer
           </Text>
           <Skills />
         </Section>
@@ -134,12 +135,7 @@ const Home: NextPage = () => {
           >
             On the Web
           </Heading>
-          <SimpleGrid
-            columns={[1, 2, 2]}
-            gap={4}
-            textAlign='center'
-            alignContent='center'
-          >
+          <SimpleGrid columns={2} gap={4} justifyItems='center'>
             <a
               href='https://github.com/ngz91'
               target='_blank'

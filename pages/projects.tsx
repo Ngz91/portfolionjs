@@ -1,5 +1,5 @@
 import { NextPage, GetStaticProps } from 'next'
-import { Container, SimpleGrid, Heading } from '@chakra-ui/react'
+import { SimpleGrid, Heading } from '@chakra-ui/react'
 
 import axios from 'axios'
 import Section from '../components/section'
@@ -22,33 +22,31 @@ const Projects: NextPage<projectProps> = ({ projects }) => {
 
   return (
     <Layout>
-      <Container>
-        <Heading
-          as='h3'
-          fontSize={20}
-          mt={6}
-          mb={4}
-          borderBottom='lg'
-          textDecoration='underline'
-          textUnderlineOffset={6}
-          textDecorationColor='#525252'
-        >
-          Projects
-        </Heading>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          {Object.keys(projects).map((item: string) => (
-            <Section key={projects[item as T].id}>
-              <ProjectsGridItem
-                title={projects[item as T].name}
-                id={projects[item as T].id}
-                slug={projects[item as T].slug}
-                brief_desc={projects[item as T].brief_description}
-                thumbnail={`http://localhost:8000${projects[item as T].image}`}
-              />
-            </Section>
-          ))}
-        </SimpleGrid>
-      </Container>
+      <Heading
+        as='h3'
+        fontSize={20}
+        mt={6}
+        mb={4}
+        borderBottom='lg'
+        textDecoration='underline'
+        textUnderlineOffset={6}
+        textDecorationColor='#525252'
+      >
+        Projects
+      </Heading>
+      <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        {Object.keys(projects).map((item: string) => (
+          <Section key={projects[item as T].id}>
+            <ProjectsGridItem
+              title={projects[item as T].name}
+              id={projects[item as T].id}
+              slug={projects[item as T].slug}
+              brief_desc={projects[item as T].brief_description}
+              thumbnail={`http://localhost:8000${projects[item as T].image}`}
+            />
+          </Section>
+        ))}
+      </SimpleGrid>
     </Layout>
   )
 }

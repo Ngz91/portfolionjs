@@ -128,7 +128,7 @@ const NavBar: React.FC<linkProps> = (props) => {
               <MenuList>
                 <NextLink href='/' passHref>
                   <MenuItem as={Link} _hover={{ textDecoration: 'none' }}>
-                    About
+                    Home
                   </MenuItem>
                 </NextLink>
                 <NextLink href='/projects' passHref>

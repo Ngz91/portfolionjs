@@ -4,14 +4,7 @@ import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import {
-  Container,
-  Box,
-  Heading,
-  Spinner,
-  Text,
-  Button,
-} from '@chakra-ui/react'
+import { Box, Heading, Spinner, Text, Button } from '@chakra-ui/react'
 import fsPromises from 'fs/promises'
 import Stack from '../../../components/stack'
 import Layout from '../../../components/layouts/article'
@@ -58,68 +51,68 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
         </Box>
       ) : (
         <Layout>
-          <Container>
-            <Heading
-              as='h3'
-              fontSize={20}
-              mt={6}
-              mb={4}
-              borderBottom='lg'
-              textDecoration='underline'
-              textUnderlineOffset={6}
-              textDecorationColor='#525252'
-            >
-              {project?.name}
-            </Heading>
-            <Box textAlign='center'>
-              <Image
-                src={
-                  `http://localhost:8000/${project?.image?.replace('/', '')}` ||
-                  '/vercel.svg'
-                }
-                width={500}
-                height={350}
-                alt={project?.name}
-              />
-            </Box>
-            <Text align='justify'>{project?.description}</Text>
-            <Box textAlign='center' mt={6}>
-              <a href={project?.github_repo} target='_blank'>
-                <Button
-                  leftIcon={<IoLogoGithub />}
-                  bgGradient='linear(to-r, teal.500, green.500)'
-                  _hover={{ bgGradient: 'linear(to-r, teal.600, green.600)' }}
-                >
-                  Github Repo
-                </Button>
-              </a>
-            </Box>
-            <br />
-            <Text
-              mb={6}
-              fontWeight='bold'
-              textDecoration='underline'
-              borderBottom='lg'
-              textUnderlineOffset={6}
-              textDecorationColor='#525252'
-            >
-              Stack:
-            </Text>
-            <Stack project={project} stack={stack} />
-            <Text my={6}>
-              <b>Project start date:</b>{' '}
-              {project?.project_date?.replaceAll('-', '/')}
-            </Text>
-            <NextLink href='/projects'>
+          <Heading
+            as='h3'
+            fontSize={20}
+            mt={6}
+            mb={4}
+            borderBottom='lg'
+            textDecoration='underline'
+            textUnderlineOffset={6}
+            textDecorationColor='#525252'
+          >
+            {project?.name}
+          </Heading>
+          <Box textAlign='center'>
+            <Image
+              src={
+                `http://localhost:8000/${project?.image?.replace('/', '')}` ||
+                '/vercel.svg'
+              }
+              width={545}
+              height={350}
+              alt={project?.name}
+            />
+          </Box>
+          <Text align='justify' mt={3}>
+            {project?.description}
+          </Text>
+          <Box textAlign='center' mt={6}>
+            <a href={project?.github_repo} target='_blank'>
               <Button
-                leftIcon={<ChevronLeftIcon />}
+                leftIcon={<IoLogoGithub />}
                 bgGradient='linear(to-r, teal.500, green.500)'
                 _hover={{ bgGradient: 'linear(to-r, teal.600, green.600)' }}
               >
-                Projects
+                Github Repo
               </Button>
-            </NextLink>
-          </Container>
+            </a>
+          </Box>
+          <br />
+          <Text
+            mb={6}
+            fontWeight='bold'
+            textDecoration='underline'
+            borderBottom='lg'
+            textUnderlineOffset={6}
+            textDecorationColor='#525252'
+          >
+            Stack:
+          </Text>
+          <Stack project={project} stack={stack} />
+          <Text my={6}>
+            <b>Project start date:</b>{' '}
+            {project?.project_date?.replaceAll('-', '/')}
+          </Text>
+          <NextLink href='/projects'>
+            <Button
+              leftIcon={<ChevronLeftIcon />}
+              bgGradient='linear(to-r, teal.500, green.500)'
+              _hover={{ bgGradient: 'linear(to-r, teal.600, green.600)' }}
+            >
+              Projects
+            </Button>
+          </NextLink>
         </Layout>
       )}
     </>

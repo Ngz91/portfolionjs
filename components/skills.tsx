@@ -25,7 +25,7 @@ const TechIcon: React.FC<techProps> = ({ tech, desc }) => (
 
 const Skills: React.FC = () => (
   <Box textAlign='center' alignContent='center'>
-    <SimpleGrid columns={[3, 4, 4]} gap={4}>
+    <SimpleGrid columns={[3, 4, 4]} gap={4} justifyItems='center'>
       <TechIcon tech='python' desc='description about the technology here' />
       <TechIcon tech='python' desc='description about the technology here' />
       <TechIcon tech='python' desc='description about the technology here' />

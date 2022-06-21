@@ -7,7 +7,7 @@ const Stack: React.FC<ProjectProps> = (props) => {
 
   return (
     <Box textAlign='center' alignContent='center'>
-      <SimpleGrid columns={[2, 3, 3]} gap={4}>
+      <SimpleGrid columns={[2, 3, 3]} gap={4} justifyItems='center'>
         {Array.isArray(project?.technologies) ? (
           project?.technologies.map((item: string, index: number) =>
             item.toLowerCase() !== 'tensorflow' ? (

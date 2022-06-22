@@ -16,15 +16,15 @@ const nextConfig = {
     return {
       '/': {page: '/'},
       '/projects': {page: '/projects'},
-      '/project/1/klickwell-ml': {page: '/project', query: {id: '1', slug: 'klickwell-ml'}},
-      '/project/2/klickwell-live': {page: '/project', query: {id: '2', slug: 'klickwell-live'}},
-      '/project/3/klickwell': {page: '/project', query: {id: '3', slug: 'klickwell'}},
-      '/project/4/inspyro': {page: '/project', query: {id: '4', slug: 'inspyro'}},
-      '/project/5/baseshop': {page: '/project', query: {id: '5', slug: 'baseshop'}},
-      '/project/6/portfolionjs': {page: '/project', query: {id: '6', slug: 'portfolionjs'}},
-      '/project/7/portfolio-api': {page: '/project', query: {id: '7', slug: 'portfolioapi'}},
-      '/project/8/cryptopal': {page: '/project', query: {id: '8', slug: 'cryptopal'}},
-      '/project/9/baseshopnjs': {page: '/project', query: {id: '9', slug: 'baseshopnjs'}},
+      '/project/1/klickwell-ml': {page: '/project/[id]/[slug]', query: {id: '1', slug: 'klickwell-ml'}},
+      '/project/2/klickwell-live': {page: '/project/[id]/[slug]', query: {id: '2', slug: 'klickwell-live'}},
+      '/project/3/klickwell': {page: '/project/[id]/[slug]', query: {id: '3', slug: 'klickwell'}},
+      '/project/4/inspyro': {page: '/project/[id]/[slug]', query: {id: '4', slug: 'inspyro'}},
+      '/project/5/baseshop': {page: '/project/[id]/[slug]', query: {id: '5', slug: 'baseshop'}},
+      '/project/6/portfolionjs': {page: '/project/[id]/[slug]', query: {id: '6', slug: 'portfolionjs'}},
+      '/project/7/portfolio-api': {page: '/project/[id]/[slug]', query: {id: '7', slug: 'portfolioapi'}},
+      '/project/8/cryptopal': {page: '/project/[id]/[slug]', query: {id: '8', slug: 'cryptopal'}},
+      '/project/9/baseshopnjs': {page: '/project/[id]/[slug]', query: {id: '9', slug: 'baseshopnjs'}},
     }
   }
 };

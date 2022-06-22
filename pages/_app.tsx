@@ -6,7 +6,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
 import theme from '../lib/theme'
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps | any) {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

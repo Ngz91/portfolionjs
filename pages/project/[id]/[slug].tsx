@@ -213,7 +213,7 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [{ params: { slug: '', id: '' } }],
+    paths: [{ params: { slug: 'klickwell', id: '3' } }],
     fallback: true,
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, SimpleGrid, Tooltip, Text } from '@chakra-ui/react'
-import type { ProjectProps } from '../pages/projects/[id]/[slug]'
+import type { ProjectProps } from '../pages/project/[id]/[slug]'
 
 const Stack: React.FC<ProjectProps> = (props) => {
   const { project, stack } = props

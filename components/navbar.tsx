@@ -26,6 +26,11 @@ type linkProps = {
   href?: string | any
   path?: string
   children?: ReactNode
+  target?: string
+  display?: string
+  alignItems?: string
+  style?: any
+  pl?: any
 }
 
 const LinkItem: React.FC<linkProps> = ({ href, path, children, ...props }) => {

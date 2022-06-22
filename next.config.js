@@ -11,6 +11,13 @@ const nextConfig = {
     config.resolve.fallback = {fs: false};
     return config;
   },
+
+  exportPathMap: function () {
+    return {
+      '/': {page: '/'},
+      '/projects/1/klickwell/': {page: '/projects/[id]/[slug]'}
+    }
+  }
 };
 
 module.exports = nextConfig

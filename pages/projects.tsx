@@ -42,7 +42,9 @@ const Projects: NextPage<projectProps> = ({ projects }) => {
               id={projects[item as T].id}
               slug={projects[item as T].slug}
               brief_desc={projects[item as T].brief_description}
-              thumbnail={`https://ngzportfolioapi.herokuapp.com${projects[item as T].image}`}
+              thumbnail={`https://ngzportfolioapi.herokuapp.com${
+                projects[item as T].image
+              }`}
             />
           </Section>
         ))}
@@ -53,13 +55,16 @@ const Projects: NextPage<projectProps> = ({ projects }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const res = await axios.get('https://ngzportfolioapi.herokuapp.com/api/projects/', {
-      headers: {
-        'Content-Type': 'application/json',
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
-      },
-    })
+    const res = await axios.get(
+      'https://ngzportfolioapi.herokuapp.com/api/projects/',
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
+        },
+      }
+    )
     return {
       props: {
         projects: res.data,

@@ -10,7 +10,7 @@ type techProps = {
 const TechIcon: React.FC<techProps> = ({ tech, desc, page }) => (
   <Tooltip label={desc} fontSize='12px' width='80%'>
     <Box width={130} my={4}>
-      <a href={page} target='_blank'>
+      <a href={page} target='_blank' rel='noreferrer'>
         <i
           className={`devicon-${tech.toLowerCase()}-plain colored`}
           style={{

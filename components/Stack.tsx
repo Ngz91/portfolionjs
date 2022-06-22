@@ -21,6 +21,7 @@ const Stack: React.FC<ProjectProps> = (props) => {
                   <a
                     href={stack?.[item.toLowerCase()]?.wikipage}
                     target='_blank'
+                    rel='noreferrer'
                   >
                     <i
                       className={`devicon-${
@@ -46,6 +47,7 @@ const Stack: React.FC<ProjectProps> = (props) => {
                   <a
                     href={stack?.[item.toLowerCase()]?.wikipage}
                     target='_blank'
+                    rel='noreferrer'
                   >
                     <i
                       className={`devicon-${item.toLowerCase()}-original colored`}
@@ -65,7 +67,11 @@ const Stack: React.FC<ProjectProps> = (props) => {
             label={stack?.[project?.technologies.toLowerCase()]?.description}
           >
             <Box width={150} my={4}>
-              <a href={stack?.[project?.technologies.toLowerCase()]?.wikipage}>
+              <a
+                href={stack?.[project?.technologies.toLowerCase()]?.wikipage}
+                target='_blank'
+                rel='noreferrer'
+              >
                 <i
                   className={`devicon-${project?.technologies.toLowerCase()}-plain colored`}
                   style={{ fontSize: '20px' }}

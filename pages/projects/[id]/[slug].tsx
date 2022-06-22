@@ -4,7 +4,15 @@ import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { Box, SimpleGrid, Tooltip, Heading, Spinner, Text, Button } from '@chakra-ui/react'
+import {
+  Box,
+  SimpleGrid,
+  Tooltip,
+  Heading,
+  Spinner,
+  Text,
+  Button,
+} from '@chakra-ui/react'
 import fsPromises from 'fs/promises'
 import Layout from '../../../components/layouts/article'
 import path from 'path'
@@ -48,6 +56,7 @@ const Stack: React.FC<ProjectProps> = (props) => {
                   <a
                     href={stack?.[item.toLowerCase()]?.wikipage}
                     target='_blank'
+                    rel='noreferrer'
                   >
                     <i
                       className={`devicon-${
@@ -73,6 +82,7 @@ const Stack: React.FC<ProjectProps> = (props) => {
                   <a
                     href={stack?.[item.toLowerCase()]?.wikipage}
                     target='_blank'
+                    rel='noreferrer'
                   >
                     <i
                       className={`devicon-${item.toLowerCase()}-original colored`}
@@ -92,7 +102,11 @@ const Stack: React.FC<ProjectProps> = (props) => {
             label={stack?.[project?.technologies.toLowerCase()]?.description}
           >
             <Box width={150} my={4}>
-              <a href={stack?.[project?.technologies.toLowerCase()]?.wikipage}>
+              <a
+                href={stack?.[project?.technologies.toLowerCase()]?.wikipage}
+                target='_blank'
+                rel='noreferrer'
+              >
                 <i
                   className={`devicon-${project?.technologies.toLowerCase()}-plain colored`}
                   style={{ fontSize: '20px' }}
@@ -142,8 +156,10 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
           <Box textAlign='center'>
             <Image
               src={
-                `https://ngzportfolioapi.herokuapp.com/${project?.image?.replace('/', '')}` ||
-                '/vercel.svg'
+                `https://ngzportfolioapi.herokuapp.com/${project?.image?.replace(
+                  '/',
+                  ''
+                )}` || '/vercel.svg'
               }
               width={545}
               height={350}
@@ -154,7 +170,7 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
             {project?.description}
           </Text>
           <Box textAlign='center' mt={6}>
-            <a href={project?.github_repo} target='_blank'>
+            <a href={project?.github_repo} target='_blank' rel='noreferrer'>
               <Button
                 leftIcon={<IoLogoGithub />}
                 bgGradient='linear(to-r, teal.500, green.500)'

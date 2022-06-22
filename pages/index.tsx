@@ -133,6 +133,7 @@ const Home: NextPage = () => {
           <a
             href='https://github.com/ngz91'
             target='_blank'
+            rel='noreferrer'
             style={{ textAlign: 'left', width: '170px' }}
           >
             <Button
@@ -148,6 +149,7 @@ const Home: NextPage = () => {
           <a
             href='https://linkedin.com/in/neviogomez'
             target='_blank'
+            rel='noreferrer'
             style={{ textAlign: 'left', width: '170px' }}
           >
             <Button
@@ -163,6 +165,7 @@ const Home: NextPage = () => {
           <a
             href='https://discordapp.com/users/366047479399186432'
             target='_blank'
+            rel='noreferrer'
             style={{ textAlign: 'left', width: '170px' }}
           >
             <Button

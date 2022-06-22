@@ -45,6 +45,7 @@ const LinkItem: React.FC<linkProps> = ({ href, path, children, ...props }) => {
         color={active ? '#202023' : inactiveColor}
         fontWeight={600}
         rounded='lg'
+        rel='noreferrer'
         _hover={{
           textDecoration: 'none',
         }}

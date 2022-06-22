@@ -16,6 +16,7 @@ const nextConfig = {
     return {
       '/': {page: '/'},
       '/projects': {page: '/projects'},
+      '/project': {page:'/project'},
       '/project/1/klickwell-ml': {page: '/project/[id]/[slug]'},
       '/project/2/klickwell-live': {page: '/project/[id]/[slug]'},
       '/project/3/klickwell': {page: '/project/[id]/[slug]'},

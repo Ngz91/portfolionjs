@@ -230,7 +230,6 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
         },
       }
     )
-    console.log(`Building slug: ${params.slug}`)
     const filePath = path.join(process.cwd(), 'tech_data.json')
     const jsonData = await fsPromises.readFile(filePath)
     const objectData = JSON.parse(jsonData.toString())

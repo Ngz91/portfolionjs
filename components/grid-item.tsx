@@ -55,7 +55,6 @@ export const ProjectsGridItem: React.FC<gridProps> = ({
     textAlign='center'
     boxShadow='2xl'
     paddingBottom={6}
-    mt={6}
     rounded='lg'
     transition='all 500ms ease-in-out'
     _hover={{ bgColor: 'teal.800' }}

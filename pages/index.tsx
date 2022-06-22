@@ -75,8 +75,8 @@ const Home: NextPage = () => {
           About Me
         </Heading>
         <Text textAlign='justify' style={{ textIndent: '1rem' }}>
-          Industrial Engineer who discovered a passion for coding and building
-          web applications and Machine Learning models. I have experience
+          Industrial Engineer who discovered a passion for coding, building web
+          applications and developing Machine Learning models. I have experience
           working in projects where code must be changed and updated constantly
           to achieve a better result. The majority of my projects have been
           directed to the frontend and backend development of web applications,

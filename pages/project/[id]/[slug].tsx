@@ -127,7 +127,7 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
   return (
     <>
       <Head>
-        <title>Nevio's Portfolio | {project?.name}</title>
+        <title>Nevio&apos;s Portfolio | {project?.name}</title>
       </Head>
       {router.isFallback ? (
         <Box textAlign='center' alignContent='center'>

@@ -111,7 +111,7 @@ const Home: NextPage = () => {
           My Top Skills
         </Heading>
         <Text textAlign='justify' style={{ textIndent: '1rem' }}>
-          Some of the technologies that I've worked with in my years as a
+          Some of the technologies that I&apos;ve worked with in my years as a
           software developer:
         </Text>
         <Skills />

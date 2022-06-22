@@ -15,7 +15,7 @@ const Main: React.FC<mainProps> = ({ children, router }) => {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='shortcut icon' href='/glasses.ico' />
-        <title>Nevio's Portfolio</title>
+        <title>Nevio&apos;s Portfolio</title>
       </Head>
 
       <Navbar path={router.asPath} />

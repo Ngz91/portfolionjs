@@ -72,17 +72,18 @@ const Home: NextPage = () => {
           mb={3}
           mt={4}
         >
-          Work
+          About Me
         </Heading>
         <Text textAlign='justify' style={{ textIndent: '1rem' }}>
           Industrial Engineer who discovered a passion for coding and building
-          Machine Learning models. I have experience working in projects where
-          code must be changed and updated constantly to achieve a better
-          result. The majority of my projects have been directed to the
-          automation of various tasks, but aside from my job I have continued to
-          develop my skills and have had the opportunity to work on different
-          projects including creating a program which works by applying
-          statistics to the field of horse betting.
+          web applications and Machine Learning models. I have experience
+          working in projects where code must be changed and updated constantly
+          to achieve a better result. The majority of my projects have been
+          directed to the frontend and backend development of web applications,
+          but aside from my job I have continued to develop my skills and have
+          had the opportunity to work on different projects including creating a
+          program which works by applying statistics to the field of horse
+          betting.
         </Text>
         <Box textAlign='center' my={4}>
           <NextLink href='/projects'>

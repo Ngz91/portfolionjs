@@ -16,15 +16,15 @@ const nextConfig = {
     return {
       '/': {page: '/'},
       '/projects': {page: '/projects'},
-      '/projects/1/klickwell-ml': {page: '/projects/[id]/[slug]'},
-      '/projects/2/klickwell-live': {page: '/projects/[id]/[slug]'},
-      '/projects/3/klickwell': {page: '/projects/[id]/[slug]'},
-      '/projects/4/inspyro': {page: '/projects/[id]/[slug]'},
-      '/projects/5/baseshop': {page: '/projects/[id]/[slug]'},
-      '/projects/6/portfolionjs': {page: '/projects/[id]/[slug]'},
-      '/projects/7/portfolio-api': {page: '/projects/[id]/[slug]'},
-      '/projects/8/cryptopal': {page: '/projects/[id]/[slug]'},
-      '/projects/9/baseshopnjs': {page: '/projects/[id]/[slug]'},
+      '/project/1/klickwell-ml': {page: '/project/[id]/[slug]'},
+      '/project/2/klickwell-live': {page: '/project/[id]/[slug]'},
+      '/project/3/klickwell': {page: '/project/[id]/[slug]'},
+      '/project/4/inspyro': {page: '/project/[id]/[slug]'},
+      '/project/5/baseshop': {page: '/project/[id]/[slug]'},
+      '/project/6/portfolionjs': {page: '/project/[id]/[slug]'},
+      '/project/7/portfolio-api': {page: '/project/[id]/[slug]'},
+      '/project/8/cryptopal': {page: '/project/[id]/[slug]'},
+      '/project/9/baseshopnjs': {page: '/project/[id]/[slug]'},
     }
   }
 };

@@ -32,7 +32,7 @@ export const GridItem: React.FC<gridProps> = ({
         height={20}
       />
       <LinkOverlay
-        href={`/projects/${id}/${slug}`}
+        href={`/project/${id}/${slug}`}
         target='_blank'
         rel='nooperner noreferrer'
       >
@@ -59,7 +59,7 @@ export const ProjectsGridItem: React.FC<gridProps> = ({
     transition='all 500ms ease-in-out'
     _hover={{ bgColor: 'teal.800' }}
   >
-    <NextLink href={`/projects/${id}/${slug}`}>
+    <NextLink href={`/project/${id}/${slug}`}>
       <LinkBox cursor='pointer'>
         <Image
           src={thumbnail}
@@ -71,7 +71,7 @@ export const ProjectsGridItem: React.FC<gridProps> = ({
           height={250}
           style={{ borderRadius: '10px 10px 0px 0px' }}
         />
-        <LinkOverlay href={`projects/${id}/${slug}`} target='_blank'>
+        <LinkOverlay href={`project/${id}/${slug}`} target='_blank'>
           <Text
             mt={2}
             fontSize={20}

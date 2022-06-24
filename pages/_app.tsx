@@ -5,8 +5,13 @@ import Fonts from '../components/fonts'
 import { ChakraProvider } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
 import theme from '../lib/theme'
+import { SingletonRouter } from 'next/router'
 
-function MyApp({ Component, pageProps, router }: AppProps | any) {
+type mainProps = Omit<AppProps, 'router'> & {
+  router: SingletonRouter
+}
+
+function MyApp({ Component, pageProps, router }: mainProps) {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

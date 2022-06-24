@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { NextRouter, useRouter } from 'next/router'
 import { GetStaticProps, GetStaticPaths, NextPage } from 'next'
 import axios from 'axios'
 import Head from 'next/head'
@@ -122,7 +122,7 @@ const Stack: React.FC<ProjectProps> = (props) => {
 }
 
 const Project: NextPage<ProjectProps> = ({ project, stack }) => {
-  const router = useRouter()
+  const router: NextRouter = useRouter()
 
   return (
     <>

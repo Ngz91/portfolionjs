@@ -96,7 +96,7 @@
   },
   "jupyter": {
     "id": 20,
-    "description": "Free software, open standards, and web services for interactive computing across all programming languages...",
+    "description": "Jupyter is Free software, open standards, and web services for interactive computing across all programming languages...",
     "wikipage": "https://jupyter.org/"
   },
   "pytest": {
@@ -126,7 +126,7 @@
   },
   "vim": {
     "id": 26,
-    "description": "hyperextensible Vim-based text editor...",
+    "description": "Neovim is a hyperextensible Vim-based text editor...",
     "wikipage": "https://neovim.io/"
   },
   "vscode": {

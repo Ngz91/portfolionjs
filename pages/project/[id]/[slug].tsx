@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react'
 import fsPromises from 'fs/promises'
 import Layout from '../../../components/layouts/article'
+import AccordionMain from '../../../components/accordion'
 import path from 'path'
 import { ChevronLeftIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io5'
@@ -36,89 +37,6 @@ export type ProjectProps = {
     description?: string
     wikipage?: string
   }
-}
-const Stack: React.FC<ProjectProps> = (props) => {
-  const { project, stack } = props
-
-  return (
-    <Box textAlign='center' alignContent='center'>
-      <SimpleGrid columns={[2, 3, 3]} gap={4} justifyItems='center'>
-        {Array.isArray(project?.technologies) ? (
-          project?.technologies.map((item: string, index: number) =>
-            item.toLowerCase() !== 'tensorflow' ? (
-              <Tooltip
-                label={stack?.[item.toLowerCase()]?.description}
-                key={index}
-                fontSize='12px'
-                width='80%'
-              >
-                <Box width={150} my={4} key={index}>
-                  <a
-                    href={stack?.[item.toLowerCase()]?.wikipage}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <i
-                      className={`devicon-${
-                        item.toLowerCase().split('/')[0]
-                      }-plain colored`}
-                      style={{
-                        fontSize: '28px',
-                        textShadow: '1px 1px black',
-                      }}
-                    ></i>
-                    <Text textShadow='1px 1px black'>{item}</Text>
-                  </a>
-                </Box>
-              </Tooltip>
-            ) : (
-              <Tooltip
-                label={stack?.[item.toLowerCase()]?.description}
-                key={index}
-                fontSize='12px'
-                width='80%'
-              >
-                <Box width={150} my={4} key={index}>
-                  <a
-                    href={stack?.[item.toLowerCase()]?.wikipage}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <i
-                      className={`devicon-${item.toLowerCase()}-original colored`}
-                      style={{
-                        fontSize: '28px',
-                        textShadow: '1px 1px black',
-                      }}
-                    ></i>
-                    <Text textShadow='1px 1px black'>{item}</Text>
-                  </a>
-                </Box>
-              </Tooltip>
-            )
-          )
-        ) : (
-          <Tooltip
-            label={stack?.[project?.technologies.toLowerCase()]?.description}
-          >
-            <Box width={150} my={4}>
-              <a
-                href={stack?.[project?.technologies.toLowerCase()]?.wikipage}
-                target='_blank'
-                rel='noreferrer'
-              >
-                <i
-                  className={`devicon-${project?.technologies.toLowerCase()}-plain colored`}
-                  style={{ fontSize: '20px' }}
-                ></i>
-                <Text textShadow='1px 1px black'>{project?.technologies}</Text>
-              </a>
-            </Box>
-          </Tooltip>
-        )}
-      </SimpleGrid>
-    </Box>
-  )
 }
 
 const Project: NextPage<ProjectProps> = ({ project, stack }) => {
@@ -166,38 +84,11 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
               alt={project?.name}
             />
           </Box>
-          <Text align='justify' mt={3}>
-            {project?.description}
-          </Text>
-          <Box textAlign='center' mt={6}>
-            <a href={project?.github_repo} target='_blank' rel='noreferrer'>
-              <Button
-                leftIcon={<IoLogoGithub />}
-                bgGradient='linear(to-r, teal.500, green.500)'
-                _hover={{ bgGradient: 'linear(to-r, teal.600, green.600)' }}
-              >
-                Github Repo
-              </Button>
-            </a>
-          </Box>
-          <br />
-          <Text
-            mb={6}
-            fontWeight='bold'
-            textDecoration='underline'
-            borderBottom='lg'
-            textUnderlineOffset={6}
-            textDecorationColor='#525252'
-          >
-            Stack:
-          </Text>
-          <Stack project={project} stack={stack} />
-          <Text my={6}>
-            <b>Project start date:</b>{' '}
-            {project?.project_date?.replaceAll('-', '/')}
-          </Text>
+          <br/>
+          <AccordionMain project={project} stack={stack} />
           <NextLink href='/projects'>
             <Button
+              mt={10}
               leftIcon={<ChevronLeftIcon />}
               bgGradient='linear(to-r, teal.500, green.500)'
               _hover={{ bgGradient: 'linear(to-r, teal.600, green.600)' }}

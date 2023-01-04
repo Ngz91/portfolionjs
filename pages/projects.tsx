@@ -42,7 +42,7 @@ const Projects: NextPage<projectProps> = ({ projects }) => {
               id={projects[item as T].id}
               slug={projects[item as T].slug}
               brief_desc={projects[item as T].brief_description}
-              thumbnail={`https://web-production-f691.up.railway.app/${
+              thumbnail={`https://web-production-f691.up.railway.app${
                 projects[item as T].image
               }`}
             />

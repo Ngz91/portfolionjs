@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ['localhost', 'ngzportfolioapi.herokuapp.com', 'web-production-f691.up.railway.app'],
+    domains: ['localhost', 'ngzportfolioapi.herokuapp.com'],
   },
 
   webpack5: true,

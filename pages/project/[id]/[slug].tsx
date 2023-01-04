@@ -74,7 +74,7 @@ const Project: NextPage<ProjectProps> = ({ project, stack }) => {
           <Box textAlign='center'>
             <Image
               src={
-                `https://web-production-f691.up.railway.app/${project?.image?.replace(
+                `https://ngzportfolioapi.herokuapp.com/${project?.image?.replace(
                   '/',
                   ''
                 )}` || '/vercel.svg'
@@ -112,7 +112,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   try {
     const res = await axios.get(
-      `https://web-production-f691.up.railway.app/${params.id}/${params.slug}`,
+      `https://ngzportfolioapi.herokuapp.com/api/project/${params.id}/${params.slug}`,
       {
         headers: {
           'Content-Type': 'application/json',
